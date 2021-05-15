@@ -12,11 +12,11 @@
 /* Combomap
  *
  * ,-----------------------------.       ,--------------------------------.
- * |      |    ESC    |     |     |      |     |    ESC    |    BSLH      |
+ * |      |    ESC    |     |     |      |     |    ESC    |    DEL       |
  * |-----+-----+-----+-----+------|      |--------------------------------|
- * |      |   BSPC   TAB    |     |      |    LES   COLN  ENTER  |        | 
+ * |      |   BSPC   TAB    |     |      |     |   COLN  ENTER  |        | 
  * |-----+-----+-----+--RMB+-LMB--+		 |--------------------------------|
- * |      |   MINS    |     |     |      |    QUO   UNDR   |     |        |
+ * |      |   MINS    |     |     |      |     |     |     |     |        |
  * `------+-----+-----+------+----'		   `--------------------------------'
  *  .-------------------------.           .-----------------.   
  *  |        |       |        |           |        |    |   |
@@ -32,29 +32,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----+-----+-----+-----+------|      |--------------------------------|
  * |   A  |  S  |  D  |  F  |  G  |      |  H  |  J  |  K  |  L  |    ;   | 
  * |-----+-----+-----+-----+------+		 |--------------------------------|
- * |   Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  <  |  >  |   /    |
+ * |   Z  |  X  |  C  |  V  |  B  |      |  N  |  M  |  ,  |  .  |   /    |
  * `------+-----+-----+------+----'		 `--------------------------------'
  *  .-------------------------.           .-----------------.   
- *  |CTRL|SHFT|SPC(NUM)|                    |SPC(SYM)|SHFT|ALT|
+ *  |CTRL|SHFT|SPC(NUM)|                    |SPC(SYM)|SHFT|WIN/CMD|
  *  '-------------------------'           '-----------------' 
  */
 
-BASE] = LAYOUT_gergoplex(
+[BASE] = LAYOUT_gergoplex(
     KC_Q, KC_W, KC_E, KC_R, KC_T,  	    KC_Y, KC_U, KC_I, KC_O, KC_P, 
     KC_A ,KC_S, KC_D, KC_F, KC_G,  	    KC_H, KC_J, KC_K, KC_L, KC_SCLN,
     KC_Z, KC_X, KC_C, KC_V, KC_B,  	KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
 
  		KC_LCTL, KC_LSFT, LT(NUMB, KC_SPC),									// Left
-		LT(SYMB, KC_SPC), KC_RSFT, KC_LALT																// Right
+		LT(SYMB, KC_SPC), KC_RSFT, KC_LGUI																// Right
     ),
 
 /* Keymap 1: Symbols layer
  * ,-----------------------------.       ,--------------------------------.
  * |  !   |  @  |  #  |  $  |  %  |  `   |  ^  |  &  |  *  |   (   |   )  |
  * |------+-----+-----+-----+-----|      |--------------------------------|
- * |      |     |     |     |  "  |      |  -  |  =  |  \  |  {   |   }   | 
+ * |   `  |  \  |  =  |  -  |  "  |      |     |     |     |  {   |   }   | 
  * |------+-----+-----+-----+-----+		 |--------------------------------|
- * |      |     |     |     |  '  |      |  _  |  +  |  |  |  [  |   ]    |
+ * |  ~   |  |  |  +  |  _  |  '  |      |     |     |     |  [  |   ]    |
  * `------+-----+-----+------+----'		 `--------------------------------'
  *  				.-----------------.           .------------------.   
  *  				|MMB |  ;  	|	 = 	|						|  =  |  ;  |  DEL |
@@ -63,8 +63,8 @@ BASE] = LAYOUT_gergoplex(
 
 [SYMB] = LAYOUT_gergoplex(
     KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
-    KC_SPC, KC_SPC,  KC_SPC, KC_SPC, KC_DQUO,   KC_MINS, KC_EQL, KC_SLSH, KC_LCBR, KC_RCBR,
-    KC_SPC, KC_SPC, KC_SPC, KC_SPC, KC_QUOTE,   KC_UNDS, KC_PLUS,  KC_PIPE, KC_LBRC,  KC_RBRC,
+    KC_GRAVE, KC_BSLASH,  KC_EQL, KC_MINS, KC_DQUO,   KC_SPC, KC_SPC, KC_SPC, KC_LCBR, KC_RCBR,
+    KC_TILDE, KC_PIPE, KC_PLUS, KC_UNDS, KC_QUOTE,   KC_SPC, KC_SPC,  KC_SPC, KC_LBRC,  KC_RBRC,
                       CMB_TOG, KC_SCLN, KC_EQL,   KC_EQL,  KC_SCLN, KC_DEL
     ),
 
