@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |  ~   |  |  |  +  |  _  |  '  |      |     |     |     |  [  |   ]    |
  * `------+-----+-----+------+----'		 `--------------------------------'
  *  				.-----------------.           .------------------.   
- *  				|MMB |  ;  	|	 = 	|						|  =  |  ;  |  DEL |
+ *  				|MMB |  ;  	|	  |						|  =  |  ;  |  DEL |
  *  				'-----------------'           '------------------' 
  */
 
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
     KC_GRAVE, KC_BSLASH,  KC_EQL, KC_MINS, KC_DQUO,   KC_SPC, KC_SPC, KC_SPC, KC_LCBR, KC_RCBR,
     KC_TILDE, KC_PIPE, KC_PLUS, KC_UNDS, KC_QUOTE,   KC_SPC, KC_SPC,  KC_SPC, KC_LBRC,  KC_RBRC,
-                      CMB_TOG, KC_SCLN, KC_EQL,   KC_EQL,  KC_SCLN, KC_DEL
+                      CMB_TOG, KC_SCLN, KC_SPC,   KC_EQL,  KC_SCLN, KC_DEL
     ),
 
 /* Keymap 2: Pad/Function layer
